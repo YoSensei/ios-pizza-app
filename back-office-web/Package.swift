@@ -13,7 +13,8 @@ let package = Package(
                  .upToNextMajor(from: "1.0.0")),
         // 4
         .package(url: "https://github.com/IBM-Swift/Kitura-CouchDB.git",
-                 .upToNextMajor(from: "3.0.0"))
+                 .upToNextMajor(from: "3.0.0")),
+        .package(url: "https://github.com/IBM-Swift/Kitura-StencilTemplateEngine.git", from: "1.11.0")
 
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
@@ -23,7 +24,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "back-office-web",
-            dependencies: ["Kitura" , "HeliumLogger", "CouchDB"],
+            dependencies: ["Kitura" , "HeliumLogger", "CouchDB", "KituraStencil"],
             path: "Sources"
         ),
         .testTarget(
