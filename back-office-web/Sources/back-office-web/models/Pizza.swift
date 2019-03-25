@@ -7,7 +7,8 @@ struct Pizza: Document {
     let _id: String?
     // 4
     var _rev: String?
+    
     // 5
     var name: String
-    var ingredients: [String]
+    var ingredients: String
 }

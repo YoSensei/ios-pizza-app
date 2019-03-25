@@ -3,6 +3,7 @@ import CouchDB
 import Foundation
 import Kitura
 import LoggerAPI
+import KituraStencil
 
 public class App {
     
@@ -13,6 +14,8 @@ public class App {
     let router = Router()
     
     private func postInit() {
+        
+        router.add(templateEngine: StencilTemplateEngine())
         // 1
         let connectionProperties = ConnectionProperties(host: "localhost",
                                                         port: 5984,

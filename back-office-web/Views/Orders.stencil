@@ -1,0 +1,24 @@
+<html>
+There are {{ orders.count }} orders. <br />
+
+<table class="table table-dark">
+<thead>
+<tr>
+{% for header in tableHeaders %}
+<th> {{ header }} </th>
+{% endfor %}
+</tr>
+</thead>
+<tbody>
+{% for order in orders %}
+<tr>
+<td>{{ order.owner }}</th>
+<td>{{ order.pizzas }}</td>
+<td>{{ order.status }}</td>
+<td>
+<button"> completed </button>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
